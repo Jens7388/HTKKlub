@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HTKKlub.Entities\HTKKlub.Entities.csproj" />
     <ProjectReference Include="..\HTKKlub.Logging\HTKKlub.Logging.csproj" />
   </ItemGroup>
 
