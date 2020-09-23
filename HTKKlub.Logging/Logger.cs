@@ -27,7 +27,6 @@ namespace HTKKlub.Logging
         /// </summary>
         private static void Configure()
         {
-            // Retrives the logging file path from the configuration file
             logFilePath = ConfigurationManager.AppSettings["LogFilePath"].ToString();
         }
 
@@ -47,7 +46,6 @@ namespace HTKKlub.Logging
         /// <param name="message"></param>
         public static async Task LogAsync(string message)
         {
-            // Log Message
             await WriteLogAsync(message);
         }
 
@@ -57,7 +55,6 @@ namespace HTKKlub.Logging
         /// <param name="ex"></param>
         public static void Log(Exception ex)
         {
-            // Get original Exception
             Exception original = ex.GetOriginalException();
 
             WriteLog(
@@ -76,7 +73,6 @@ namespace HTKKlub.Logging
         /// <returns></returns>
         public static async Task LogAsync(Exception exception)
         {
-            // Get original Exception
             Exception innerException = exception.GetOriginalException();
 
             await WriteLogAsync(
@@ -95,7 +91,6 @@ namespace HTKKlub.Logging
         /// <param name="logMessage"></param>
         private static void WriteLog(string logMessage)
         {
-            // Append log message with a timestamp to the log file
             File.AppendAllText(
                 logFilePath,
                 $"[{DateTime.UtcNow}]\n" +
@@ -109,7 +104,6 @@ namespace HTKKlub.Logging
         /// <param name="logMessage"></param>
         private static async Task WriteLogAsync(string logMessage)
         {
-            // Append log message with a timestamp to the log file asynchronously
             await File.AppendAllTextAsync(
                 logFilePath,
                 $"[{DateTime.Now}]\n" +
