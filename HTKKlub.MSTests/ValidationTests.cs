@@ -24,13 +24,13 @@ namespace HTKKlub.MSTests
         [TestMethod]
         public void ValidateReservationDatesTest()
         {
-            DateTime firstDate = new DateTime(2010 - 01 - 01);
-            DateTime secondDate = new DateTime(2010 - 01 - 02);
+            DateTime firstDate = new DateTime(2010,01,01);
+            DateTime secondDate = new DateTime(2010,01,02);
 
             int first = Convert.ToInt32(firstDate.ToString("yyyyMMdd"));
             int second = Convert.ToInt32(secondDate.ToString("yyyyMMdd"));
 
-            Assert.IsTrue(first > second);
+            Assert.IsTrue(first < second);
         }
     }
 }

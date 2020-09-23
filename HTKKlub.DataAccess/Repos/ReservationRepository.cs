@@ -17,7 +17,7 @@ namespace HTKKlub.DataAccess
         /// <returns></returns>
         public override async Task<IEnumerable<Reservation>> GetAllAsync()
         {
-            return await context.Set<Reservation>().Include("Court").ToListAsync();
+            return await context.Set<Reservation>().Include("FkCourt").ToListAsync();
         }
     }
 }
