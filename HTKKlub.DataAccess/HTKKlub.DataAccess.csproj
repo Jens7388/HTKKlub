@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HTKKlub.Entities\HTKKlub.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

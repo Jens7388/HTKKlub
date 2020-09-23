@@ -4,21 +4,21 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace HTKKlub.Entities
 {
-    public partial class HTXContext : DbContext
+    public partial class HTKContext : DbContext
     {
-        public HTXContext()
+        public HTKContext()
         {
         }
 
-        public HTXContext(DbContextOptions<HTXContext> options)
+        public HTKContext(DbContextOptions<HTKContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<Courts> Courts { get; set; }
-        public virtual DbSet<Members> Members { get; set; }
-        public virtual DbSet<Rankings> Rankings { get; set; }
-        public virtual DbSet<Reservations> Reservations { get; set; }
+        public virtual DbSet<Court> Courts { get; set; }
+        public virtual DbSet<Member> Members { get; set; }
+        public virtual DbSet<Ranking> Rankings { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,7 +31,7 @@ namespace HTKKlub.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Courts>(entity =>
+            modelBuilder.Entity<Court>(entity =>
             {
                 entity.HasKey(e => e.PkCourtId);
 
@@ -42,7 +42,7 @@ namespace HTKKlub.Entities
                     .HasMaxLength(255);
             });
 
-            modelBuilder.Entity<Members>(entity =>
+            modelBuilder.Entity<Member>(entity =>
             {
                 entity.HasKey(e => e.PkMemberId)
                     .HasName("PK__Member__0CF04B1884FFAD4E");
@@ -67,7 +67,7 @@ namespace HTKKlub.Entities
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Rankings>(entity =>
+            modelBuilder.Entity<Ranking>(entity =>
             {
                 entity.HasKey(e => e.PkRankId);
 
@@ -84,7 +84,7 @@ namespace HTKKlub.Entities
                     .HasConstraintName("FK_Rankings_Members");
             });
 
-            modelBuilder.Entity<Reservations>(entity =>
+            modelBuilder.Entity<Reservation>(entity =>
             {
                 entity.HasKey(e => e.PkReservationId);
 
