@@ -31,39 +31,12 @@ namespace HTKKlub.Logging
         }
 
         /// <summary>
-        /// Logs a message
-        /// </summary>
-        /// <param name="message"></param>
-        public static void Log(string message)
-        {
-            // Log Message
-            WriteLog(message);
-        }
-
-        /// <summary>
         /// Logs a message asynchronously
         /// </summary>
         /// <param name="message"></param>
         public static async Task LogAsync(string message)
         {
             await WriteLogAsync(message);
-        }
-
-        /// <summary>
-        /// Logs an exception
-        /// </summary>
-        /// <param name="ex"></param>
-        public static void Log(Exception ex)
-        {
-            Exception original = ex.GetOriginalException();
-
-            WriteLog(
-                $"Exception: {ex.Message}\n" +
-                $"Stacktrace:\n{ex.StackTrace}\n" +
-                $"Source: {ex.Source}\n" +
-                $"InnerException: {original.Message} \n" +
-                $"Stracktrace\n{original.StackTrace}\n" +
-                $"Source: {original.Source}\n");
         }
 
         /// <summary>
@@ -82,19 +55,6 @@ namespace HTKKlub.Logging
                 $"InnerException: {innerException.Message} \n" +
                 $"Stracktrace\n{innerException.StackTrace}\n" +
                 $"Source: {innerException.Source}\n");
-        }
-
-        /// <summary>
-        /// Logs the <see cref="string"/> parameter value
-        /// to the logging file in <see cref="logFilePath"/>
-        /// </summary>
-        /// <param name="logMessage"></param>
-        private static void WriteLog(string logMessage)
-        {
-            File.AppendAllText(
-                logFilePath,
-                $"[{DateTime.UtcNow}]\n" +
-                $"{logMessage}");
         }
 
         /// <summary>
