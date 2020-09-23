@@ -10,7 +10,7 @@ namespace HTKKlub.MSTests
     public class ValidationTests
     {
         [TestMethod]
-        public static void ValidateIsStringNullTest()
+        public void ValidateIsStringNullTest()
         {
             string input = "";
             Assert.IsNotNull(input);
@@ -22,7 +22,7 @@ namespace HTKKlub.MSTests
         /// <param name="input"></param>
         /// <returns>(<see cref="bool"/>, <see cref="string"/>)</returns>
         [TestMethod]
-        public static void ValidateReservationDatesTest()
+        public void ValidateReservationDatesTest()
         {
             DateTime firstDate = new DateTime(2010 - 01 - 01);
             DateTime secondDate = new DateTime(2010 - 01 - 02);
