@@ -5,9 +5,9 @@ namespace HTKKlub.Entities
 {
     public partial class Ranking
     {
-        public int PkRankId { get; set; }
-        public int FkMemberId { get; set; }
-        public int Points { get; set; }
+        public virtual int PkRankId { get; set; }
+        public virtual int FkMemberId { get; set; }
+        public virtual int Points { get; set; }
 
         public virtual Member FkMember { get; set; }
     }

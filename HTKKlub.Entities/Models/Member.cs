@@ -18,10 +18,9 @@ namespace HTKKlub.Entities
             ReservationsFkSecondMember = new HashSet<Reservation>();
         }
 
-        public int PkMemberId
-        { get; set; }
+        public virtual int PkMemberId{ get; set; }
 
-        public string Name 
+        public virtual string Name 
         {
             get
             {
@@ -46,7 +45,7 @@ namespace HTKKlub.Entities
             }
         }
 
-        public string Address 
+        public virtual string Address 
         {
             get
             {
@@ -71,7 +70,7 @@ namespace HTKKlub.Entities
             }
         }
 
-        public string Email 
+        public virtual string Email 
         {
             get
             {
@@ -96,7 +95,7 @@ namespace HTKKlub.Entities
             }
         }
 
-        public DateTime BirthDate { get; set; }
+        public virtual DateTime BirthDate { get; set; }
 
         public virtual ICollection<Ranking> Rankings { get; set; }
         public virtual ICollection<Reservation> ReservationsFkFirstMember { get; set; }

@@ -10,12 +10,12 @@ namespace HTKKlub.Entities
         protected DateTime reservationStart;
         protected DateTime reservationEnd;
 
-        public int PkReservationId { get; set; }
-        public int FkCourtId { get; set; }
-        public int FkFirstMemberId { get; set; }
-        public int FkSecondMemberId { get; set; }
+        public virtual int PkReservationId { get; set; }
+        public virtual int FkCourtId { get; set; }
+        public virtual int FkFirstMemberId { get; set; }
+        public virtual int FkSecondMemberId { get; set; }
 
-        public DateTime ReservationStart
+        public virtual DateTime ReservationStart
         {
             get
             {
@@ -38,7 +38,8 @@ namespace HTKKlub.Entities
                 }
             }
         }
-        public DateTime ReservationEnd
+
+        public virtual DateTime ReservationEnd
         {
             get
             {
