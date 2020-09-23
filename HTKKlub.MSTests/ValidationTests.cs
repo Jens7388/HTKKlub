@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HTKKlub.Tests
+namespace HTKKlub.MSTests
 {
     [TestClass]
     public class ValidationTests
@@ -24,8 +24,8 @@ namespace HTKKlub.Tests
         [TestMethod]
         public static void ValidateReservationDatesTest()
         {
-            DateTime firstDate = new DateTime(2010-01-01);
-            DateTime secondDate = new DateTime(2010-01-02);
+            DateTime firstDate = new DateTime(2010 - 01 - 01);
+            DateTime secondDate = new DateTime(2010 - 01 - 02);
 
             int first = Convert.ToInt32(firstDate.ToString("yyyyMMdd"));
             int second = Convert.ToInt32(secondDate.ToString("yyyyMMdd"));

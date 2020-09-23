@@ -1,17 +1,14 @@
-﻿using HTKKlub.DataAccess;
+using HTKKlub.DataAccess;
 using HTKKlub.Entities;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace HTKKlub.Tests
+namespace HTKKlub.MSTests
 {
-
     [TestClass]
     public class RepoTests
     {
