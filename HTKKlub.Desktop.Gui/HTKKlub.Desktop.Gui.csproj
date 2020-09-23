@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="UserControls\" />
   </ItemGroup>
 
   <ItemGroup>
