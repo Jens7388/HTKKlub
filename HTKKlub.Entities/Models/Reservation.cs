@@ -26,7 +26,7 @@ namespace HTKKlub.Entities
                 if(reservationStart != value)
                 {
                     // Using the validation class, check if the start time of the reservation is before the end time
-                    (bool isValid, string errorMessage) = Validations.ValidateIsDateBefore(value, reservationEnd);
+                    (bool isValid, string errorMessage) = Validations.ValidateReservationDates(value, reservationEnd);
                     if(isValid)
                     {
                         ReservationStart = value;
@@ -49,8 +49,8 @@ namespace HTKKlub.Entities
             {
                 if(reservationEnd != value)
                 {
-                    // Using the validation class, check if the end time of the reservation is after the start time
-                    (bool isValid, string errorMessage) = Validations.ValidateIsDateAfter(value, reservationEnd);
+                    // Using the validation class, check if the start time of the reservation is before the end time
+                    (bool isValid, string errorMessage) = Validations.ValidateReservationDates(value, reservationEnd);
                     if(isValid)
                     {
                         reservationEnd = value;

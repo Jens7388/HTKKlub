@@ -23,11 +23,11 @@ namespace HTKKlub.Utilities
         }
 
         /// <summary>
-        /// Checks if a date is before another
+        /// Checks if the reservation start date is before the end date
         /// </summary>
         /// <param name="input"></param>
         /// <returns>(<see cref="bool"/>, <see cref="string"/>)</returns>
-        public static (bool, string) ValidateIsDateBefore(DateTime firstDate, DateTime secondDate)
+        public static (bool, string) ValidateReservationDates(DateTime firstDate, DateTime secondDate)
         {
             if(firstDate == null || secondDate == null)
             {
@@ -38,31 +38,6 @@ namespace HTKKlub.Utilities
             int second = Convert.ToInt32(secondDate.ToString("yyyyMMdd"));
 
             if(first > second)
-            {
-                return (true, string.Empty);
-            }
-            else
-            {
-                return (false, "The second date was before the first date");
-            }
-        }
-
-        /// <summary>
-        /// Checks if a date is before another
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns>(<see cref="bool"/>, <see cref="string"/>)</returns>
-        public static (bool, string) ValidateIsDateAfter(DateTime firstDate, DateTime secondDate)
-        {
-            if(firstDate == null || secondDate == null)
-            {
-                return (false, "A date cannot be null");
-            }
-
-            int first = Convert.ToInt32(firstDate.ToString("yyyyMMdd"));
-            int second = Convert.ToInt32(secondDate.ToString("yyyyMMdd"));
-
-            if(first < second)
             {
                 return (true, string.Empty);
             }
