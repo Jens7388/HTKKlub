@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HTKKlub.DataAccess
 {
-    public class RepositoryBase<T>: IRepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T>: IRepositoryBase<T> where T : class
     {
         protected HTKContext context;
 
