@@ -10,7 +10,7 @@ namespace HTKKlub.Entities
         protected string name;
         protected string address;
         protected string email;
-        protected string phone;
+        protected string phoneNumber;
 
         public Member()
         {
@@ -96,25 +96,26 @@ namespace HTKKlub.Entities
             }
         }
 
-        public virtual string Phone {
+        public virtual string PhoneNumber
+        {
             get
             {
-                return phone;
+                return phoneNumber;
             }
 
             set
             {
-                if(phone != value)
+                if(phoneNumber != value)
                 {
                     // Using the validation class, check if the string is not null
                     (bool isValid, string errorMessage) = Validations.ValidateIsStringNull(value);
                     if(isValid)
                     {
-                        Phone = value;
+                        PhoneNumber = value;
                     }
                     else
                     {
-                        throw new ArgumentException(errorMessage, nameof(Phone));
+                        throw new ArgumentException(errorMessage, nameof(PhoneNumber));
                     }
                 }
             }

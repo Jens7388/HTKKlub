@@ -66,7 +66,7 @@ namespace HTKKlub.Entities
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Phone)
+                entity.Property(e => e.PhoneNumber)
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
