@@ -44,7 +44,7 @@ namespace HTKKlub.Desktop.Gui.UserControls
                     await viewModel.InitializeAsync();
                 }
             }
-            //Writes a message to the logger if an exception is caught
+            //Writes a message to the logger if an exception is caught while loading
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Der opstod en fejl.", MessageBoxButton.OK, MessageBoxImage.Error);

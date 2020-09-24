@@ -1,12 +1,88 @@
 ﻿<UserControl x:Class="HTKKlub.Desktop.Gui.UserControls.CourtControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:HTKKlub.Desktop.Gui.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             xmlns:viewModel="clr-namespace:HTKKlub.Desktop.Gui.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             Loaded="OnLoaded">
+
+<UserControl.DataContext>
+        <viewModel:CourtViewModel />
+    </UserControl.DataContext>
+
     <Grid>
-            
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <ListView Grid.Row="0"
+                      ItemsSource="{Binding Courts}"
+                      SelectedItem="{Binding SelectedCourt}">
+
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID"
+                                        DisplayMemberBinding="{Binding PkCourtId}" />
+                        <GridViewColumn Header="Navn"
+                                        DisplayMemberBinding="{Binding CourtName}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="250"></RowDefinition>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Oplysninger"
+                      Background="White"
+                      Grid.Row="0"
+                      Width="400">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Navn"
+                                   Width="80" />
+                            <TextBox Width="150"
+                                     Text="{Binding CourtName, Mode=TwoWay}" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1"
+                                Orientation="Horizontal">
+                        <Button Content="Tilføj ny"
+                                Width="60"
+                                Height="40"
+                                Command="{Binding AddCommand}" />
+                        <Button Content="Rediger"
+                                Width="60"
+                                Height="40"
+                                Command="{Binding EditCommand}"
+                                CommandParameter="{Binding SelectedCourt}" />
+                        <Button Content="Gem"
+                                Width="60"
+                                Height="40"
+                                Command="{Binding SaveCommand}"
+                                CommandParameter="{Binding SelectedCourt}" />
+                        <Button Content="Slet Medlem"
+                                Width="80"
+                                Height="40"
+                                Command="{Binding DeleteCommand}"
+                                CommandParameter="{Binding SelectedCourt}" />
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+        </Grid>
     </Grid>
 </UserControl>

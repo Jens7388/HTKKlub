@@ -27,7 +27,7 @@ namespace HTKKlub.Logging
         /// </summary>
         private static void Configure()
         {
-            logFilePath = ConfigurationManager.AppSettings["LogFilePath"].ToString();
+            logFilePath = "C:/Users/jens7388/Desktop/log.txt";
         }
 
         /// <summary>

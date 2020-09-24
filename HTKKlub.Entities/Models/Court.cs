@@ -31,7 +31,7 @@ namespace HTKKlub.Entities
                     (bool isValid, string errorMessage) = Validations.ValidateIsStringNull(value);
                     if(isValid)
                     {
-                        CourtName = value;
+                        courtName = value;
                     }
                     else
                     {

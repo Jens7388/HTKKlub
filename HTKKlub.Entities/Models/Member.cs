@@ -36,7 +36,7 @@ namespace HTKKlub.Entities
                     (bool isValid, string errorMessage) = Validations.ValidateIsStringNull(value);
                     if(isValid)
                     {
-                        Name = value;
+                        name = value;
                     }
                     else
                     {
@@ -61,7 +61,7 @@ namespace HTKKlub.Entities
                     (bool isValid, string errorMessage) = Validations.ValidateIsStringNull(value);
                     if(isValid)
                     {
-                        Address = value;
+                        address = value;
                     }
                     else
                     {
@@ -86,7 +86,7 @@ namespace HTKKlub.Entities
                     (bool isValid, string errorMessage) = Validations.ValidateIsStringNull(value);
                     if(isValid)
                     {
-                        Email = value;
+                        email = value;
                     }
                     else
                     {
@@ -111,7 +111,7 @@ namespace HTKKlub.Entities
                     (bool isValid, string errorMessage) = Validations.ValidateIsStringNull(value);
                     if(isValid)
                     {
-                        PhoneNumber = value;
+                        phoneNumber = value;
                     }
                     else
                     {

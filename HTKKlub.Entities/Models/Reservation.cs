@@ -29,7 +29,7 @@ namespace HTKKlub.Entities
                     (bool isValid, string errorMessage) = Validations.ValidateReservationDates(value, reservationEnd);
                     if(isValid)
                     {
-                        ReservationStart = value;
+                        reservationStart = value;
                     }
                     else
                     {

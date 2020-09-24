@@ -56,36 +56,36 @@
                             <Label Content="Navn"
                                    Width="80" />
                             <TextBox Width="150"
-                                     Text="{Binding SelectedMember.Name, Mode=TwoWay}" />
+                                     Text="{Binding Name, Mode=TwoWay}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Addresse"
                                    Width="80" />
                             <TextBox Width="150"
-                                     Text="{Binding SelectedMember.Address, Mode=TwoWay}" />
+                                     Text="{Binding Address, Mode=TwoWay}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Mobil"
                                    Width="80" />
                             <TextBox Width="150"
-                                     Text="{Binding SelectedMember.PhoneNumber, Mode=TwoWay}" />
+                                     Text="{Binding PhoneNumber, Mode=TwoWay}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Email"
                                    Width="80" />
                             <TextBox Width="150"
-                                     Text="{Binding SelectedMember.Email, Mode=TwoWay}" />
+                                     Text="{Binding Email, Mode=TwoWay}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Fødselsdag"
                                    Width="80" />
                             <DatePicker Width="150"
-                                        SelectedDate="{Binding SelectedMember.Birthdate, Mode=TwoWay}" />
+                                        SelectedDate="{Binding BirthDate, Mode=TwoWay}" />
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Row="1"
                                 Orientation="Horizontal">
-                        <Button Content="Tilføj"
+                        <Button Content="Tilføj ny"
                                 Width="60"
                                 Height="40"
                                 Command="{Binding AddCommand}" />
