@@ -1,9 +1,11 @@
-﻿using HTKKlub.Entities;
-
+﻿using HTKKlub.DataAccess;
+using HTKKlub.Entities;
+using HTKKlub.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace HTKKlub.Desktop.Gui.ViewModels
 {
@@ -38,6 +40,21 @@ namespace HTKKlub.Desktop.Gui.ViewModels
             set
             {
                 SetProperty(ref selectedMember, value);
+            }
+        }
+        public override async Task LoadAllAsync()
+        {
+            try
+            {
+                MemberRepository repo = new MemberRepository();
+
+                IEnumerable<Member> members = await repo.GetAllAsync();
+
+                Members.ReplaceWith(members);
+            }
+            catch
+            {
+                throw;
             }
         }
     }

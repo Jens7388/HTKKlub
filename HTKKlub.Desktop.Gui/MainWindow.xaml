@@ -4,9 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HTKKlub.Gui"
+        xmlns:usercontrols="clr-namespace:HTKKlub.Desktop.Gui.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TabControl>
+            <TabItem Header="Medlemmer">
+                <usercontrols:MembersControl />
+            </TabItem>
+            <TabItem Header="Tennisbaner">
+                <usercontrols:CourtControl />
+            </TabItem>
+            <TabItem Header="Rangliste">
+                <usercontrols:RankingControl />
+            </TabItem>
+            <TabItem Header="Reservationer">
+                <usercontrols:ReservationControl />
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

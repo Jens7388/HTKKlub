@@ -14,5 +14,20 @@ namespace HTKKlub.Desktop.Gui.ViewModels
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// Runs the <see cref="LoadAllAsync"/> method
+        /// </summary>
+        /// <returns></returns>
+        public virtual async Task InitializeAsync()
+        {
+            try
+            {
+                await LoadAllAsync();
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }
