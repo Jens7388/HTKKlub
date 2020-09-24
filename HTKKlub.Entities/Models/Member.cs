@@ -10,6 +10,7 @@ namespace HTKKlub.Entities
         protected string name;
         protected string address;
         protected string email;
+        protected string phone;
 
         public Member()
         {
@@ -90,6 +91,30 @@ namespace HTKKlub.Entities
                     else
                     {
                         throw new ArgumentException(errorMessage, nameof(Email));
+                    }
+                }
+            }
+        }
+
+        public virtual string Phone {
+            get
+            {
+                return phone;
+            }
+
+            set
+            {
+                if(phone != value)
+                {
+                    // Using the validation class, check if the string is not null
+                    (bool isValid, string errorMessage) = Validations.ValidateIsStringNull(value);
+                    if(isValid)
+                    {
+                        Phone = value;
+                    }
+                    else
+                    {
+                        throw new ArgumentException(errorMessage, nameof(Phone));
                     }
                 }
             }

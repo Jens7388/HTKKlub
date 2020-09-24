@@ -18,7 +18,7 @@ namespace HTKKlub.DataAccess.Repos
         /// <returns></returns>
         public override async Task<IEnumerable<Ranking>> GetAllAsync()
         {
-            return await context.Set<Ranking>().OrderByDescending(r => r.Points).ToListAsync();
+            return await context.Set<Ranking>().Include("FkMember").OrderByDescending(r => r.Points).ToListAsync();
         }
     }
 }

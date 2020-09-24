@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTKKlub.DataAccess", "HTKKl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTKKlub.MSTests", "HTKKlub.MSTests\HTKKlub.MSTests.csproj", "{88211916-0843-486C-8890-C4654FCBA20E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTKKlub.WebAPI", "HTKKlub.WebAPI\HTKKlub.WebAPI.csproj", "{47970900-C997-45B9-B2BE-D6A83E724D19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTKKlub.WebAPI", "HTKKlub.WebAPI\HTKKlub.WebAPI.csproj", "{47970900-C997-45B9-B2BE-D6A83E724D19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTKKlub.Services", "HTKKlub.Services\HTKKlub.Services.csproj", "{478AA9AF-73F1-40F3-9D66-017A71050544}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{47970900-C997-45B9-B2BE-D6A83E724D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47970900-C997-45B9-B2BE-D6A83E724D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47970900-C997-45B9-B2BE-D6A83E724D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{478AA9AF-73F1-40F3-9D66-017A71050544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478AA9AF-73F1-40F3-9D66-017A71050544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478AA9AF-73F1-40F3-9D66-017A71050544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478AA9AF-73F1-40F3-9D66-017A71050544}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

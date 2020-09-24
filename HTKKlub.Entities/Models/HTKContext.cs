@@ -65,6 +65,11 @@ namespace HTKKlub.Entities
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
+
+                entity.Property(e => e.Phone)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Ranking>(entity =>
