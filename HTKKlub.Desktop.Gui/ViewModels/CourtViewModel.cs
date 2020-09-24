@@ -250,15 +250,14 @@ namespace HTKKlub.Desktop.Gui.ViewModels
                     catch(Exception ex)
                     {
                         MessageBox.Show(ex.Message);
-                    }
-                    
-                    // Reset values in the view
-                    CourtName = null;              
-                    // Get the listview of the items
-                    ICollectionView view = CollectionViewSource.GetDefaultView(Courts);
-                    // Refresh listview
-                    view.Refresh();
+                    }                                  
                 }
+                // Reset values in the view
+                CourtName = null;
+                // Get the listview of the items
+                ICollectionView view = CollectionViewSource.GetDefaultView(Courts);
+                // Refresh listview
+                view.Refresh();
             }
         }
         /// <summary>

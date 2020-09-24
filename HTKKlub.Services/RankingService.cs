@@ -15,7 +15,7 @@ namespace HTKKlub.Services
         /// Returns a list of all order objects.
         /// </summary>
         /// <returns></returns>
-        public virtual async Task<List<Ranking>> GetAllOrdersAsync()
+        public virtual async Task<List<Ranking>> GetAllAsync()
         {
             try
             {
@@ -23,10 +23,10 @@ namespace HTKKlub.Services
                 string json = await CallWebApiAsync("http://localhost:64637/ranking/all");
 
                 // Deserialize the JSON data into an object list
-                List<Ranking> orderData = JsonConvert.DeserializeObject<List<Ranking>>(json);
+                List<Ranking> rankingData = JsonConvert.DeserializeObject<List<Ranking>>(json);
 
                 // Return the object list
-                return orderData;
+                return rankingData;
             }
             catch
             {

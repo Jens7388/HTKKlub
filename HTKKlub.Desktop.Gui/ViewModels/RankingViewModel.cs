@@ -1,9 +1,11 @@
 ﻿using HTKKlub.Entities;
-
+using HTKKlub.Services;
+using HTKKlub.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace HTKKlub.Desktop.Gui.ViewModels
 {
@@ -38,6 +40,22 @@ namespace HTKKlub.Desktop.Gui.ViewModels
             set
             {
                 SetProperty(ref selectedRanking, value);
+            }
+        }
+
+        public override async Task LoadAllAsync()
+        {
+            try
+            {
+                RankingService service  = new RankingService();
+
+                IEnumerable<Ranking> rankings = await service.GetAllAsync();
+
+                Rankings.ReplaceWith(rankings);
+            }
+            catch
+            {
+                throw;
             }
         }
     }

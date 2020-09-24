@@ -26,6 +26,7 @@
     <ProjectReference Include="..\HTKKlub.DataAccess\HTKKlub.DataAccess.csproj" />
     <ProjectReference Include="..\HTKKlub.Entities\HTKKlub.Entities.csproj" />
     <ProjectReference Include="..\HTKKlub.Logging\HTKKlub.Logging.csproj" />
+    <ProjectReference Include="..\HTKKlub.Services\HTKKlub.Services.csproj" />
   </ItemGroup>
 
 </Project>
