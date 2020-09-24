@@ -1,4 +1,5 @@
 using HTKKlub.DataAccess;
+using HTKKlub.DataAccess.Repos;
 using HTKKlub.Entities;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -42,6 +43,18 @@ namespace HTKKlub.MSTests
             members = await repository.GetAllAsync();
 
             Assert.IsTrue(members.Count() > 0);
+        }
+
+        [TestMethod]
+        public async Task GetAllRankings()
+        {
+            RankingRepository repo;
+            IEnumerable<Ranking> rankings;
+
+            repo = new RankingRepository();
+            rankings = await repo.GetAllAsync();
+
+            Assert.IsTrue(rankings.Count() > 0);
         }
     }
 }
